@@ -32,15 +32,15 @@ workflows:
             #     AWS_APP_TYPE: "ANDROID_APP" # Type of the main app that is being tested. See more about `--type` flag at https://docs.aws.amazon.com/cli/latest/reference/devicefarm/create-upload.html
             #     AWS_TEST_PACKAGE_TYPE: "INSTRUMENTATION_TEST_PACKAGE" # Type of the test package that is being uploaded. See more about `--type` flag at https://docs.aws.amazon.com/cli/latest/reference/devicefarm/create-upload.html
             #     AWS_TEST_TYPE: "INSTRUMENTATION" # See more about `--test` flag `type` option at https://docs.aws.amazon.com/cli/latest/reference/devicefarm/schedule-run.html  
-            node: v16.11.1
-            xcode: latest
+            # node: v16.11.1
+            # xcode: latest
         triggering:
             events:
                 - push
                 - tag
                 - pull_request
             branch_patterns:
-                - pattern: develop
+                - pattern: master
                   include: true
                   source: true
         # scripts:
